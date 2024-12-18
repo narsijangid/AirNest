@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+#headerSeach{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 140px;
+    height: 36px;
+    width: 320px;
+    border-radius: 20px;
+    
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 4px black;
+}
+
+#headerSeach span {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgb(198, 198, 198);
+}
+
+#headerSeach div {
+    font-family: "Gill Sans", sans-serif;
+    margin-left: 6px;
+}
+#headerSeach img{
+    height: 17px;
+    width: 19px;
+     background-color: red;
+     padding: 6px;
+     border-radius: 50%;
+     margin-left: 10px;
+}
+
+#headerAccount{
+    display: flex;
+  gap: 20px;
+  height: 30px;
+  
+ 
+}
+.line {
+    margin-top: 10px;
+    width: 100%; 
+    height: 1px;
+    background-color: rgb(212, 210, 210); 
+}
+
+#languageicon{
+    margin-top: 10px;
+    height: 9px;
+    width: 9px;
+}
+#airbnbyourhome{
+    height: 18px;
+padding: 10px;
+border-radius: 30px;
+ 
+}
+#airbnbyourhome:hover{
+    height: 18px;
+padding: 10px;
+border-radius: 30px;
+ 
+    background-color:rgb(246, 245, 245);
+}
+
+#headermenu{
+    display: flex;
+    gap: 10px;
+    width: 60px;
+    height: 30px;
+    padding-bottom: 3px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 16px;
+}
+#headermenu:hover{
+    display: flex;
+    gap: 10px;
+    width: 60px;
+    height: 30px;
+    padding-bottom: 3px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 16px;
+}
+
+
