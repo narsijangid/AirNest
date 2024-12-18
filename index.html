@@ -1,38 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2932bc8540.js" crossorigin="anonymous"></script>
+    <title>Airbnb Clone</title>
 </head>
+
 <body>
-    <header >
-        <div id="headerlogo"> 
-            <img src="/icons/logo.svg" alt="">
+    <header>
+        <div class="logo">
+            <a href="#"><img src="/icons/logo.svg" alt="Airbnb Logo"></a>
         </div>
 
-        <div id="headerSeach">
-           <div>Anywhere</div>
-           <span>|</span>
-           <div>Any week</div>
-           <span>|</span>
-           <div>Add guests</div>
-           <img  src="/icons/Search.svg" alt="">
-        </div>
-        <div id="headerAccount">
-            <div id="airbnbyourhome">Airbnb your home</div>
-            <div id="languageicon"><img src="/icons/language-icon.svg" alt=""></div>
-
-            <div id="headermenu">
-                <div style="height: 10px; width: 10px;"><img src="/icons/Menu.svg" alt=""></div>
-                <div style="height: 15px; width: 15px;"><img src="/icons/Profileicon.svg" alt=""></div>
+        <div class="search-bar">
+            <button>Anywhere</button>
+            <span>|</span>
+            <button>Any week</button>
+            <span>|</span>
+            <button>Add guests</button>
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
-    
-    </header>
-    <div class="line">
 
+
+        <div class="right-menu">
+            <a href="#">Airbnb your home</a>
+            <i class="fa-solid fa-globe"></i>
+            <div class="user-menu">
+                <a href="javascript:void(0)" class="icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-user-circle"></i>
+                </a>
+
+            </div>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <h1>Find your next stay</h1>
+        <p>Search for unique places to stay and experiences around the world.</p>
+    </section>
+
+    <!-- menue -->
+    <div class="menu" id="userMenu">
+        <a href="#">Sign up</a>
+        <a href="#">Log in</a><hr>
+        <a href="#">Airbnb your home</a>
+        <a href="#">Host an experience</a>
+        <a href="#">Help Centre</a>
     </div>
 </body>
+
 </html>
+
+<script src="script.js"></script>
