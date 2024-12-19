@@ -82,7 +82,8 @@ header {
     border-radius: 3rem;
     padding: 0.5rem 0.75rem;
 }
-.user-menu a{
+
+.user-menu a {
     display: flex;
     gap: 0.5rem;
 }
@@ -129,4 +130,69 @@ header {
 
 .menu a:hover {
     background-color: #f1f1f1;
+}
+
+
+/* Category Slider Styles */
+.slider-wrapper {
+    position: relative;
+    width: 70%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    /* Adjust the width to fit the category */
+    min-width: 100px;
+    /* Ensures each category takes equal space */
+    justify-content: center;
+}
+
+.category img.icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.category p.label {
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Arrows */
+.arrow {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
 }
