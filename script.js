@@ -133,4 +133,5 @@ function switchImage(button, direction) {
         leftButton.style.display = 'none';
         rightButton.style.display = 'flex';
     }
+    
 }
