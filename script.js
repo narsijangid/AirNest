@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
     fetchData();
 });
@@ -55,14 +54,14 @@ let allData = [];
 let isShowingAll = false;
 const ROW_LIMIT = 4;
 
-async function fetchData(){
+async function fetchData() {
     const response = await fetch("https://airnest-8ab86-default-rtdb.firebaseio.com/places.json");
     const data = await response.json();
     allData = Object.values(data);
     displayData(allData.slice(0, ROW_LIMIT * getCardsPerRow()));
 };
 
-function displayData(data){
+function displayData(data) {
     heroSection.innerHTML = "";
     data.forEach((place) => {
         const divCard = document.createElement('div');
@@ -75,40 +74,43 @@ function displayData(data){
             <img src="${place.image}" alt="${place.name}" data-alt-image="${place.image2}">
         </div>
         <div>
-            <p><strong>${place.name}</strong></p>
+            <div class="card-header">
+                <p class="name"><strong>${place.name}</strong></p>
+                <p class="rating">★ ${place.rating}</p>
+            </div>
             <p>${place.distance} kilometers away</p>
             <p>${place.date}</p>
-            <p><strong>₹${place.price}</strong> per night</p>
+            <p><strong>₹${place.price}</strong> night</p>
         </div>
         `;
         heroSection.appendChild(divCard);
     });
 }
 
-function getCardsPerRow(){
+function getCardsPerRow() {
     const cardWidth = 300;
     const containerWidth = heroSection.offsetWidth;
     return Math.floor(containerWidth / cardWidth);
 }
 
 showMoreButton.addEventListener('click', () => {
-    if(isShowingAll){
+    if (isShowingAll) {
         displayData(allData.slice(0, ROW_LIMIT * getCardsPerRow()));
         showMoreButton.textContent = "Show More";
-    }  else{
+    } else {
         displayData(allData);
         showMoreButton.style.display = "none";
     }
     isShowingAll = !isShowingAll;
 });
 
-function toggleHeart(heartIcon){
+function toggleHeart(heartIcon) {
     const isLiked = heartIcon.dataset.liked === "true";
     heartIcon.dataset.liked = !isLiked;
     heartIcon.classList.toggle('liked');
 }
 
-function switchImage(button, direction){
+function switchImage(button, direction) {
     const card = button.closest('.card');
     const img = card.querySelector('img');
     const currentSrc = img.src;
@@ -118,18 +120,18 @@ function switchImage(button, direction){
 
     img.classList.remove('slide-left', 'slide-right');
 
-    if(direction === 'next'){
+    if (direction === 'next') {
         img.src = altImage;
         img.setAttribute('data-alt-image', currentSrc);
         img.classList.add('slide-left');
         leftButton.style.display = 'flex';
         rightButton.style.display = 'none';
-    }  else if(direction === 'prev'){
+    } else if (direction === 'prev') {
         img.src = altImage;
         img.setAttribute('data-alt-image', currentSrc);
         img.classList.add('slide-right');
         leftButton.style.display = 'none';
         rightButton.style.display = 'flex';
     }
+    
 }
-

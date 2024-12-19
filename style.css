@@ -259,35 +259,54 @@ form .login-btn:hover {
     background: #e62950;
 }
 
-
-.hero-section{
+.hero-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 30px 60px;
 }
 
-.card{
+.card {
     position: relative;
     overflow: hidden;
 }
 
-.card img{
+.card img {
     width: 100%;
     height: 310px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.card div{
+
+.card div {
     position: relative;
 }
 
-.card p{
+.card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .card-header .name {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.card .card-header .rating {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+}
+
+.card p {
     font-size: 14px;
 }
 
-.heart-icon{
+.heart-icon {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -306,16 +325,16 @@ form .login-btn:hover {
     transition: all 0.3s ease;
 }
 
-.heart-icon:hover{
+.heart-icon:hover {
     transform: scale(1.1);
 }
 
-.heart-icon.liked{
+.heart-icon.liked {
     color: red;
     background: rgba(255, 235, 235, 0.9);
 }
 
-.slider-btn{
+.slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -335,64 +354,63 @@ form .login-btn:hover {
     transition: all 0.3s ease;
 }
 
-.slider-btn.left{
+.slider-btn.left {
     left: 15px;
 }
 
-.slider-btn.right{
+.slider-btn.right {
     right: 15px;
 }
 
-.slider-btn.left:hover{
-  background-color: lightgray;
-}
-
-.slider-btn.right:hover{
+.slider-btn.left:hover,
+.slider-btn.right:hover {
     background-color: lightgray;
 }
 
-.card div:hover .slider-btn{
+.card div:hover .slider-btn {
     display: flex;
 }
 
-.slide-left{
+.slide-left {
     animation: slide-left 0.4s forwards;
 }
 
-.slide-right{
+.slide-right {
     animation: slide-right 0.4s forwards;
 }
 
-@keyframes slide-left{
+@keyframes slide-left {
     from {
         transform: translateX(100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
-@keyframes slide-right{
-    from{
+@keyframes slide-right {
+    from {
         transform: translateX(-100%);
         opacity: 0;
     }
-    to{
+
+    to {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
-.hero-footer{
+.hero-footer {
     font-family: Arial, sans-serif;
     font-size: 18px;
     text-align: center;
     margin: 30px 0;
 }
 
-.hero-footer>button{
+.hero-footer>button {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
@@ -405,9 +423,8 @@ form .login-btn:hover {
     cursor: pointer;
 }
 
-.hero-footer>button:hover{
+.hero-footer>button:hover {
     cursor: pointer;
     transition: transform 0.2s;
     transform: scale(1.05);
 }
-
