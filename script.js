@@ -113,7 +113,7 @@ async function fetchData() {
 
 function displayData(data) {
     heroSection.innerHTML = "";
-    data.forEach((place) => {
+    data.forEach((place, index) => {
         const divCard = document.createElement('div');
         divCard.classList.add("card");
         divCard.innerHTML = `
@@ -133,9 +133,24 @@ function displayData(data) {
             <p><strong>₹${place.price}</strong> night</p>
         </div>
         `;
+
+      
+        divCard.addEventListener('click', () => {
+            const queryParams = new URLSearchParams({
+                name: place.name,
+                image1: place.image,
+                image2: place.image2,
+                rating: place.rating,
+                distance: place.distance,
+                price: place.price,
+            });
+            window.location.href = `productpage.html?${queryParams.toString()}`;
+        });
+
         heroSection.appendChild(divCard);
     });
 }
+
 
 function getCardsPerRow() {
     const cardWidth = 300;
@@ -185,3 +200,96 @@ function switchImage(button, direction) {
     }
     
 }
+
+
+
+
+let btns = document.getElementsByClassName('btns'); 
+Array.from(btns).forEach(tab => {
+    tab.addEventListener('click', function () {
+        Array.from(btns).forEach(btn => btn.classList.remove('underlined'));
+        this.classList.add('underlined');
+    });
+});
+
+
+
+
+
+
+
+
+
+//ggggggggggggggggggggggggggggggggg
+
+
+
+function openAuthPopup() {
+    document.getElementById('authPopup').style.display = 'block';
+}
+
+
+function closeAuthPopup() {
+    document.getElementById('authPopup').style.display = 'none';
+}
+
+function checkLoginStatus() {
+    const user = localStorage.getItem('user');
+    if (user) {
+     
+        const userName = JSON.parse(user).name;
+        document.getElementById('signUpBtn').style.display = 'none';
+        document.getElementById('logInBtn').style.display = 'none';
+        const userMenu = document.getElementById('userMenu');
+        userMenu.innerHTML = `
+            <a href="#">${userName}</a>
+            <a href="javascript:void(0)" id="logoutBtn">Log out</a>
+            <hr>
+            <a href="#">Airbnb your home</a>
+            <a href="#">Host an experience</a>
+            <a href="#">Help Centre</a>
+        `;
+        document.getElementById('logoutBtn').addEventListener('click', logout);
+    }
+}
+
+
+function logout() {
+    localStorage.removeItem('user');
+    location.reload();
+}
+
+
+document.getElementById('signUpBtn').addEventListener('click', openAuthPopup);
+document.getElementById('logInBtn').addEventListener('click', openAuthPopup);
+document.getElementById('closeAuthPopup').addEventListener('click', closeAuthPopup);
+
+
+document.getElementById('authForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    
+    if (email && password) {
+        const user = {
+            name: email.split('@')[0],  
+            email,
+            password
+        };
+        
+     
+        localStorage.setItem('user', JSON.stringify(user));
+        
+ 
+        closeAuthPopup();
+        checkLoginStatus();
+    }
+});
+
+
+window.onload = checkLoginStatus;
+// (((((((((((((((((((())))))))))))))))))))
+
+
