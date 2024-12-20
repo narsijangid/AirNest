@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
+    <link rel="stylesheet" href="./footer.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -98,6 +99,7 @@
                     <img src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt="arrow">
                 </div>
             </div>
+
         </section>
     </section>
     <section class="finalFooter">
@@ -157,3 +159,14 @@
 </footer>
 </body>
 </html>
+<script>
+
+    let btns = document.getElementsByClassName('btns'); 
+    Array.from(btns).forEach(tab => {
+        tab.addEventListener('click', function () {
+            Array.from(btns).forEach(btn => btn.classList.remove('underlined'));
+            this.classList.add('underlined');
+        });
+    });
+
+</script>
