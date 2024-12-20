@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/2932bc8540.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/icons/logo.png" type="image/png">
+    <title>AirNest</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="/icons/logo.png" alt="Airbnb Logo"></a>
+        </div>
+
+        <div class="search-bar">
+            <button>Anywhere</button>
+            <span>|</span>
+            <button>Any week</button>
+            <span>|</span>
+            <button>Add guests</button>
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+
+        <div class="right-menu">
+            <a href="#">Airbnb your home</a>
+            <i class="fa-solid fa-globe" id="languageIcon"></i>
+            <div class="user-menu">
+                <a href="javascript:void(0)" class="icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-user-circle"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+  
+    <div class="language-popup" id="languagePopup">
+        <div class="popup-header">
+            <span>Select Language</span>
+            <button class="close-btn" id="closePopup">&times;</button>
+        </div>
+        <div class="language-grid">
+            <button>English</button>
+            <button>Spanish</button>
+            <button>French</button>
+            <button>German</button>
+            <button>Chinese</button>
+            <button>Japanese</button>
+            <button>Korean</button>
+            <button>Italian</button>
+        </div>
+    </div>
+   
+
+
+    <div class="menu" id="userMenu">
+        <a href="#">Sign up</a>
+        <a href="#">Log in</a>
+        <hr>
+        <a href="#">Airbnb your home</a>
+        <a href="#">Host an experience</a>
+        <a href="#">Help Centre</a>
+    </div>
+
+    <div class="popup-overlay" id="authPopup">
+        <div class="popup-content">
+            <button class="close-popup-btn" id="closeAuthPopup">&times;</button>
+            <h2>Welcome to AirNest</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+<div id="productpagemain">
+    <div id="producttitle">
+    <div><h2>The Orchard Farm - Pet-friendly+Pool+Jacuzzi</h2>
+        
+        </div>
+        <div id="productpageshare">
+            <div><img  src="/icons/share.svg" alt="">Share</div>
+            <div ><img src="/icons/heart.svg" alt="">Save</div>
+        </div>
+    </div>
+
+
+    <!-- -- -->
+
+    <div id="productpageimage">
+        <div id="firstimg" ><img src="https://a0.muscache.com/im/pictures/miso/Hosting-45942402/original/c2edd936-c82f-4c34-b9c2-0d2b2daa465c.jpeg?im_w=960&im_format=avif" alt=""></div>
+        <div id="productimagegrid">
+            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-45942402/original/c2edd936-c82f-4c34-b9c2-0d2b2daa465c.jpeg?im_w=960&im_format=avif" alt="">
+            <img id="scndimage" src="https://a0.muscache.com/im/pictures/miso/Hosting-45942402/original/c2edd936-c82f-4c34-b9c2-0d2b2daa465c.jpeg?im_w=960&im_format=avif" alt="">
+            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-45942402/original/c2edd936-c82f-4c34-b9c2-0d2b2daa465c.jpeg?im_w=960&im_format=avif" alt="">
+            <img id="thrdimage" src="https://a0.muscache.com/im/pictures/miso/Hosting-45942402/original/c2edd936-c82f-4c34-b9c2-0d2b2daa465c.jpeg?im_w=960&im_format=avif" alt="">
+        </div>
+   
+    </div>
+
+
+
+    
+    <!-- 000000000000 -->
+<div class="productmainbox">
+    <div id="producttextdetail" >
+
+        <h2>Farm stay in Gurugram, India</h2>
+        <p>16+ guests4 bedrooms4 beds4 bathrooms</p>
+        <div><img src="/icons/star.svg" alt="">New</div>
+        
+        <hr>
+        <div id="postproductman" ><img src="https://t4.ftcdn.net/jpg/04/31/98/79/360_F_431987950_MjqTSvy8iAhSJLGOAfcoYtBZHmzylMEy.jpg" alt=""><h4 id="textofpublicer">Hosted by Hostizzy</h4></div>
+        
+        
+        <hr>
+        
+        <div id="buildingtexts" >
+            <img src="/icons/building.svg" alt="">
+            <div id="buildingtext">
+                <h3>Self check-in</h3>
+                <p>You can check in with the building staff.</p>
+            </div>
+        </div>
+        <div id="buildingtexts" >
+            <img src="/icons/location.svg" alt="">
+            <div id="buildingtext">
+                <h3>Unbeatable location</h3>
+                <p>100% of guests in the past year gave this location a 5-star rating.</p>
+            </div>
+        </div>
+        <div id="buildingtexts" >
+            <img src="/icons/key.svg" alt="">
+            <div id="buildingtext">
+                <h3>Exceptional check-in experience</h3>
+                <p>Recent guests gave the check-in process a 5-star rating.</p>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <p id="productiondiscription">Welcome to Orchard Farm, a stunning family-friendly and pet-friendly luxury farmhouse just 45 minutes from Delhi and Gurgaon, this farmhouse offers a tranquil escape for you and your loved ones with exclusive amenities like a private pool and Jacuzzi.
+        
+            It is a perfect place for getaways near Delhi and Gurgoan with friends and family...</p>
+        <h4>Show more ></h4>
+        
+        <hr>
+        </div>
+
+        
+        <div>
+            <div class="card">
+                <div class="price">₹22,500 <span>night</span></div>
+            
+                <div class="dates">
+                  <div class="check-in">
+                    <span>CHECK-IN</span>
+                    <span>12/29/2024</span>
+                  </div>
+                  <div class="check-out">
+                    <span>CHECKOUT</span>
+                    <span>1/3/2025</span>
+                  </div>
+                </div>
+            
+                <div class="guests">
+                  <span>GUESTS</span>
+                  <span>1 guest</span>
+                  <i class="arrow-down"></i>
+                </div>
+            
+                <button class="reserve">Reserve</button>
+            
+                <div class="details">
+                  <div class="detail">
+                    <span>₹22,500 x 5 nights</span>
+                    <span>₹1,12,500</span>
+                  </div>
+                  <div class="detail">
+                    <span>Airbnb service fee</span>
+                    <span>₹15,882</span>
+                  </div>
+                  <div class="detail total">
+                    <span>Total before taxes</span>
+                    <span>₹1,28,382</span>
+                  </div>
+                </div>
+            
+                <div class="report">
+                  <i class="flag"></i>
+                  <span>Report this listing</span>
+                </div>
+              </div>
+        </div>
+</div>
+
+<!-- ----- -->
+ <h3 id="whereyousleep" >Where you'll sleep</h3>
+<div class="buttons">
+    <button class="button" id="prev" disabled><img src="/icons/prev2.svg" alt=""></button>
+    <button class="button" id="next"><img src="/icons/next2.svg" alt=""></button>
+  </div>
+<div class="carousel-container">
+    <div class="carousel" id="carousel">
+      <div class="carousel-item">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-45942402/original/1a207aee-71ba-410f-8725-59322f78c268.jpeg?im_w=320&im_format=avif" alt="Bedroom 1">
+        <h3>Bedroom 1</h3>
+        <p>1 double bed, 1 sofa bed, 1 bunk bed</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-587439221666468647/original/c12474fc-e7bf-4875-b4d3-84068b64dd84.jpeg?im_w=720&im_format=avif" alt="Bedroom 2">
+        <h3>Bedroom 2</h3>
+        <p>1 double bed, 1 sofa bed</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI3MDc5NDUzOTU2OTEwMTgyOQ%3D%3D/original/a6b80d28-c027-4b5e-9bd8-ea17e0836395.jpeg?im_w=720&im_format=avif" alt="Bedroom 3">
+        <h3>Bedroom 3</h3>
+        <p>2 single beds, 1 sofa bed</p>
+      </div>
+    </div>
+  </div>
+
+
+  
+<!-- ----- -->
+
+
+
+
+
+<div id="placeoffersection">
+<hr>
+    <h3>What this place offers</h3>
+
+    <div id="placeofferallthings">
+        <div class="placeiconas">
+            <div><img src="/nav-icons/2.jpg" alt=""><p>Garden view</p></div>
+   <div><img src="/icons/kitchen.svg" alt=""><p>Kitchen</p></div>
+   <div><img src="/nav-icons/6.jpg" alt=""><p>Dedicated workspace</p></div>
+   <div><img src="/nav-icons/8.jpg" alt=""><p>Private outdoor pool – available all year, open specific hours, pool cover, pool toys</p></div>
+        </div>
+
+
+ <div  class="placeiconas">
+    <div><img src="/nav-icons/21.jpg" alt=""><p>Courtyard view</p></div>
+    <div><img src="/icons/Wifi.svg" alt=""><p>Wifi – 30 Mbps</p></div>
+    <div><img src="/icons/car.svg" alt=""><p>Free driveway parking on premises – 8 spaces</p></div>
+    <div><img src="/icons/camara.svg" alt=""><p>Exterior security cameras on property</p></div>
+ </div>
+    </div>
+<hr>
+
+<div id="nighlonavala">
+<h2 >5 nights in Lonavala</h2>
+<p>29 Dec 2024 - 3 Jan 2025</p>
+</div>
+<img id="staticcalaendarimg" src="/nav-icons/31.png" alt="">
+
+</div>
+<div id="Guestfavourite">
+    <img src="/nav-icons/5.0.png" alt="">
+ <h1>Guest favourite</h1>
+ <p>This home is in the top 10% of eligible listings based on ratings, reviews and reliability</p>
+</div>
+
+
+
+<div class="rating-container">
+    <div class="rating-overall">
+      <p>Overall rating</p>
+      <div class="bars">
+        <div class="bar"><span>5</span><div class="bar-fill" style="width: 100%;"></div></div>
+        <div class="bar"><span>4</span><div class="bar-fill"></div></div>
+        <div class="bar"><span>3</span><div class="bar-fill"></div></div>
+        <div class="bar"><span>2</span><div class="bar-fill"></div></div>
+        <div class="bar"><span>1</span><div class="bar-fill"></div></div>
+      </div>
+    </div>
+    <div class="rating-details">
+      <div class="detail">
+        <p>Cleanliness</p>
+        <span>5.0</span>
+        <img src="/icons/cleanliness.svg" alt="Cleanliness Icon">
+    
+      </div>
+      <div class="detail">
+        <p>Accuracy</p>
+        <span>5.0</span>
+        <img src="/icons/Yes.svg" alt="Accuracy Icon">
+     
+      </div>
+      <div class="detail">
+        <p>Check-in</p>
+        <span>5.0</span>
+        <img src="/icons/key.svg" alt="Check-in Icon">
+     
+      </div>
+      <div class="detail">
+        <p>Communication</p>
+        <span>5.0</span>
+        <img src="/icons/chat.svg" alt="Communication Icon">
+        
+      </div>
+      <div class="detail">
+        <p>Location</p>
+        <span>4.8</span>
+        <img src="/icons/location.svg" alt="Location Icon">
+      
+      </div>
+      <div class="detail">
+        <p>Value</p>
+        <span>5.0</span>
+        <img src="/icons/label.svg" alt="Value Icon">
+       
+      </div>
+    </div>
+  </div>
+  
+
+
+
+</div>
+<hr>
+<div class="comments-container">
+    <div class="comment">
+        <div class="comment-header">
+            <img src="https://media.istockphoto.com/id/1413766112/photo/successful-mature-businessman-looking-at-camera-with-confidence.jpg?s=612x612&w=0&k=20&c=NJSugBzNuZqb7DJ8ZgLfYKb3qPr2EJMvKZ21Sj5Sfq4=" alt="Profile">
+            <div>
+                <div class="name">Anuj</div>
+                <div class="years">5 years on Airbnb</div>
+            </div>
+        </div>
+        <div class="comment-content">
+            <div class="rating">★★★★★</div>
+            <div class="date">4 days ago</div>
+            <div class="text">Nestled in a peaceful, scenic area, the villa offered stunning views of the surrounding landscape, whether it was the lush greenery or the sparkling ocean in the distance...</div>
+        </div>
+    </div>
+    <div class="comment">
+        <div class="comment-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ql1B1RDhDLYU6bYvl3At-7C13dyYUmHl9Q&s" alt="Profile">
+            <div>
+                <div class="name">Manan</div>
+                <div class="years">7 years on Airbnb</div>
+            </div>
+        </div>
+        <div class="comment-content">
+            <div class="rating">★★★★★</div>
+            <div class="date">2 weeks ago</div>
+            <div class="text">Perfect place for a relaxing vacation. Beautiful house, packed with amenities and a perfect location. Sachin is a great host and is very proactive and helpful...</div>
+        </div>
+    </div>
+    <div class="comment">
+        <div class="comment-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0gY3CPs6CXJq90FPZu4Fiz9ED0Yywl7KMmw&s" alt="Profile">
+            <div>
+                <div class="name">Bharat</div>
+                <div class="years">8 years on Airbnb</div>
+            </div>
+        </div>
+        <div class="comment-content">
+            <div class="rating">★★★★★</div>
+            <div class="date">8 days ago</div>
+            <div class="text">scenic area, the villa offered stunning views of the surrounding landscape, whether it was the lush greenery or the sparkling ocean in the distance...</div>
+        </div>
+    </div>
+    <div class="comment">
+        <div class="comment-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS66E7dn2QgvfwYIAM5pvyVyWlGjI3Y8E89FQ&s" alt="Profile">
+            <div>
+                <div class="name">Yamraj</div>
+                <div class="years">9 years on Airbnb</div>
+            </div>
+        </div>
+        <div class="comment-content">
+            <div class="rating">★★★★★</div>
+            <div class="date">8 days ago</div>
+            <div class="text">Such a wonderful stay at Sachin's place. we thoroughly enjoyed. I have stayed in multiple properties at Airbnb in and outside India, Sachin has ensured all the aspects of hospitality so well. The support system at the property is amazing. vineet and his partner made us so comfortable. my parents, kids everybody enjoyed the stay. looking forward to come back and spend more time here.
+                Show more...</div>
+        </div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0gY3CPs6CXJq90FPZu4Fiz9ED0Yywl7KMmw&s" alt="Profile">
+            <div>
+                <div class="name">Amaan</div>
+                <div class="years">2 years on Airbnb</div>
+            </div>
+        </div>
+        <div class="comment-content">
+            <div class="rating">★★★★★</div>
+            <div class="date">5 days ago</div>
+            <div class="text">Nestled in a peaceful, scenic area, the villa offered stunning views of the surrounding landscape, whether it was the lush greenery or the sparkling ocean in the distance...</div>
+        </div>
+    </div>
+    <div class="comment">
+        <div class="comment-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMwkQM8Bs43E_AoT25iBmLXLbkO6SRv7rQsA&s" alt="Profile">
+            <div>
+                <div class="name">Mahesh</div>
+                <div class="years">5 years on Airbnb</div>
+            </div>
+        </div>
+        <div class="comment-content">
+            <div class="rating">★★★★★</div>
+            <div class="date">4 days ago</div>
+            <div class="text">The stay was great, Sachin was very responsive. The care taker nitin was also very understanding. The place was very private so there was no issues playing music. The property</div>
+        </div>
+    </div>
+    
+ 
+</div>
+
+<hr>
+<div id="maptitle">
+<h2  >Where you’ll be</h2>
+<p>Lonavala, Maharashtra, India</p>
+</div>
+<div id="map-container">
+  
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.4408206464157!2d73.39008381536154!3d18.755071587252307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be801f48e27a49f%3A0x29905cc6f9c9e760!2sLonavala%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1689068043130!5m2!1sen!2sus"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+</div>
+
+<h2 id="maptitle">Things to Know</h2>
+<div class="things-to-know">
+   
+    <div class="section">
+        <h3>House Rules</h3>
+        <ul>
+            <li>Check-in after 1:00 PM</li>
+            <li>Checkout before 11:00 AM</li>
+            <li>Pets allowed</li>
+            <li>Show more ></li>
+        </ul>
+    </div>
+    <div class="section">
+        <h3>Safety & Property</h3>
+        <ul>
+            <li>No carbon monoxide alarm</li>
+            <li>Exterior security cameras on property</li>
+            <li>Smoke alarm</li>
+            <li>Show more ></li>
+        </ul>
+    </div>
+    <div class="section">
+        <h3>Cancellation Policy</h3>
+        <ul>
+            <li>Free cancellation before 24 Dec. Cancel before check-in on 29 Dec for a partial refund.</li>
+            <li>Review this Host's full policy for details.</li>
+            <li>Show more ></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<div class="containerss">
+    <div class="column">
+        <h2>Support</h2>
+        <ul>
+            <li><a href="#">Help Centre</a></li>
+            <li><a href="#">Get help with a safety issue</a></li>
+            <li><a href="#">AirCover</a></li>
+            <li><a href="#">Anti-discrimination</a></li>
+            <li><a href="#">Disability support</a></li>
+            <li><a href="#">Cancellation options</a></li>
+            <li><a href="#">Report neighbourhood concern</a></li>
+        </ul>
+    </div>
+    <div class="column">
+        <h2>Hosting</h2>
+        <ul>
+            <li><a href="#">Airbnb your home</a></li>
+            <li><a href="#">AirCover for Hosts</a></li>
+            <li><a href="#">Hosting resources</a></li>
+            <li><a href="#">Community Forum</a></li>
+            <li><a href="#">Hosting responsibly</a></li>
+            <li><a href="#">Join a free Hosting class</a></li>
+            <li><a href="#">Find a co-host</a></li>
+        </ul>
+    </div>
+    <div class="column">
+        <h2>Airbnb</h2>
+        <ul>
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="#">New features</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Airbnb.org emergency stays</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="bottom-section">
+    <p>&copy; 2024 Airbnb, Inc.</p>
+    <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Sitemap</a></li>
+        <li><a href="#">Company details</a></li>
+    </ul>
+    <div class="language-currency">
+        <a href="#">English (IN)</a>
+        <a href="#">INR</a>
+    </div>
+    <div class="social-media">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>
+</body>
+
+<script src="script.js"></script>
+</html>
