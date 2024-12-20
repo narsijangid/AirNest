@@ -1,0 +1,556 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0; 
+  padding: 0; 
+}
+
+html, body {
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  padding-top: 70px;
+}
+
+.nestheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  background-color: white;
+  padding: 20px 150px; 
+  z-index: 1000;
+}
+
+.nestlogo img {
+  height: 50px;
+}
+
+.nestheader > button {
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #F62D5D;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nestheader > button:hover {
+  background-color: #e22c54; 
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 100px;
+  gap: 100px;
+}
+
+.content {
+  flex: 1;
+  margin-top: 100px;
+  max-width: 400px;
+  padding-top: 90px;
+}
+
+.content h1:first-child{
+  font-size: 45px;
+  margin: 0;
+  color: #333;
+}
+
+.content h1:nth-child(2){
+  font-size: 45px;
+  margin: 0;
+  margin-left: 40px;
+  color: #333;
+}
+
+.content h1:nth-child(3){
+  font-size: 45px;
+  margin: 0;
+  margin-bottom:25px;
+  margin-left: 60px;
+  color: #333;
+}
+
+.ratep{
+  font-size: 16px;
+  color: #666;
+  padding-left: 75px;
+}
+
+.content a {
+  color: #ff5a5f;
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+.slider-container {
+  margin: 20px 40px;
+}
+
+input[type="range"]{
+  width: 100%;
+}
+
+.search-bar {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 35px;
+  gap: 10px;
+  padding: 20px 25px;
+}
+
+.search-bar input {
+  font-size: 16px;
+  border-radius: 15px;
+  flex: 1;
+  border: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #ff5a5f;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #e0484e;
+}
+
+.map-container {
+  flex: 2;
+  position: relative;
+  max-width: 600px;
+  height: 600px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+.mobile {
+  text-align: center;
+  margin: 20px;
+}
+
+.mobile h1 {
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  max-width: 1200px;
+  gap: 50px;
+}
+
+.feature {
+  text-align: center;
+  max-width: 300px;
+}
+
+.feature i {
+  background-color: #f9f9f9;
+  border-radius: 30%;
+  padding: 20px;
+  width: 60px;
+  height: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.feature p {
+  font-size: 18px;
+}
+
+.cta-button {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.cta-button button {
+  padding: 15px 80px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button button:hover ,.aircoverbttn:hover {
+  background-color: #333;
+}
+
+.aircover {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.aircover-content {
+text-align: center;
+margin-bottom: 20px;
+font-size: 18px;
+line-height: 1.6;
+}
+
+.aircover-content h2 {
+font-size: 50px;
+margin-bottom: 20px;
+}
+
+.fst{
+font-size: 22px;
+color: gray;
+}
+
+.aircover-content ul{
+list-style-type: none;
+padding: 0;
+margin-top: 65px;
+margin-bottom: 65px;
+margin-left: 475px;
+margin-right:475px;
+}
+
+.aircover-content ul li{
+font-size: 18px;
+margin: 10px 0;
+display: flex;
+justify-content: space-between; 
+align-items: center;
+padding: 15px 0; 
+border-bottom: 1px solid #ddd;
+border-top: none;
+}
+
+.aircover-content ul li:last-child{
+border-bottom: none; 
+}
+
+
+
+.aircover-content i{
+color: rgb(4, 200, 4); 
+font-weight: bold;
+margin-left: auto;
+} 
+
+.aircover-disclaimer{
+  font-size: 14px;
+  color: gray;
+  margin-top: 30px;
+}
+
+.snd{
+  font-size: 14px;
+  color: gray;
+}
+
+.snd>a{
+  color: black;
+}
+
+.aircoverbttn{
+  padding: 15px 80px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bigpic p{
+  font-size: 45px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bigpic>img{
+  height: 30rem;
+  width:80%;
+  margin-left: 150px;
+}
+
+.featurestext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 45px auto;
+  max-width: 1200px;
+  gap: 65px;
+}
+
+.featuretext>h2{
+  text-align: center;
+  text-align: justify;
+  font-size: 18px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.featuretext{
+  text-align: center;
+  text-align: justify;
+  font-size: 16px;
+  color: gray;
+}
+
+.faq-container{
+  background-color:#F7F7F7 ;
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.faq-section {
+max-width: 700px;
+margin: 0 auto;
+}
+
+.faq-header h1 {
+font-size:45px;
+font-weight: bold;
+margin-bottom: 30px;
+text-align: center;
+}
+
+.faq-list {
+text-align: left;
+margin-bottom: 50px;
+}
+
+.faq-item {
+position: relative;
+padding: 15px 0;
+border-bottom: 1px solid #ddd;
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-select {
+display: block;
+width: 100%;
+font-size: 24px;
+font-weight: 500;
+text-align: left;
+background: none;
+border: none;
+outline: none;
+cursor: pointer;
+appearance: none;
+position: relative;
+}
+
+.faq-options {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+background:#F7F7F7;
+z-index: 1000;
+}
+
+.faq-options.active {
+display: block;
+}
+
+.faq-options li {
+padding: 10px;
+font-size: 16px;
+text-align: left;
+cursor: pointer;
+list-style: none;
+transition: background-color 0.3s ease;
+border: collapse  ;
+background-color: #F7F7F7;
+}
+
+
+.faq-footer {
+margin-top: 50px;
+text-align: center;
+}
+
+.faq-footer h2 {
+font-size: 28px;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.faq-footer p {
+font-size: 18px;
+color: gray;
+margin-bottom: 40px;
+}
+
+.faq-footer button {
+background-color: black;
+color: white;
+font-size: 20px;
+font-weight: bold;
+padding: 15px 80px;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.faq-footer button:hover {
+background-color: #333;
+}
+
+.secondpagefooter {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-head{
+font-size: 14px;
+color: gray;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-left: 100px;
+padding-right: 100px;
+}
+ 
+.footer-head p{
+  margin-top: 3px;
+}
+.footer-head>p>a{
+color: black;
+}
+
+.finalFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.finabox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.content h4 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.content p {
+  margin: 8px 0;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.content p:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  height: 1.5px;
+  background-color: #e0e0e0;
+  margin: 20px 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 100px;
+
+}
+
+.bottomLeft {
+  font-size: 15px;
+  color: black;
+}
+
+.bottomLeft a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.bottomLeft a:hover {
+  text-decoration: underline;
+}
+
+.bottomRight {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.bottomRight a{
+  text-decoration: none;
+  margin-right: 10px;
+  color: #333;
+  font-size: 14px;
+}
+
+.icons i {
+  font-size: 20px;
+  margin: 0 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.icons i:hover {
+  color: #000;
+}

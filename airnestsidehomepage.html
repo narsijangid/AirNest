@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./airnestsecond.css">
+  <script src="https://kit.fontawesome.com/7d353bf72c.js" crossorigin="anonymous"></script>
+  <title>Airnest Second Page</title>
+</head>
+<body>
+
+ <header class="nestheader">
+  <div class="nestlogo">
+    <a href="#"><img src="./icons/logo.png" alt="Airnest Logo"></a>
+  </div> 
+  <button>Airnest Setup</button>
+ </header>
+
+ <div class="container">
+  <div class="content">
+      <h1>Your home could</h1>
+      <h1>make <span id="rateDisplay">₹5,000</span></h1>
+      <h1>on Airnest</h1>
+      <p id="rateText" class="ratep">1 night · ₹5,000/night</p>
+      <p class="ratep"><a href="#">Learn how we estimate earnings</a></p>
+
+      <div class="slider-container">
+          <input id="rateSlider" type="range" min="5000" max="100000" value="5000" oninput="updateRate()">
+      </div>
+
+      <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Rohtak · Entire place · 2 bedrooms">
+      </div>
+  </div>
+
+  <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d448253.4350641942!2d77.34904501731378!3d28.63036266758724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1734711703449!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+
+ <div class="mobile">
+   <h1>It's easy to list your home on AirNest</h1>
+   <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg?im_w=1680&im_format=avif" height="550rem" width="60%" alt="Airnest listing">
+ </div>
+
+ <div class="features">
+
+   <div class="feature">
+    <i class="fa-solid fa-house" alt="Feature 1 Icon"></i>
+     <p>Create a listing for</p>
+     <p>your place in just a few steps</p>
+   </div>
+
+   <div class="feature">
+    <i class="fa-solid fa-stopwatch" alt="Feature 2 Icon"></i>
+     <p>Go at your own pace,<p>
+     <p>and make changes whenever</p>
+   </div>
+
+   <div class="feature">
+    <i class="fa-solid fa-message" alt="Feature 3 Icon"></i>
+     <p>Get 1:1 support from </p>
+     <p>experienced hosts at any time</p>
+   </div>
+
+ </div>
+
+ <div class="cta-button">
+   <button>AirNest Setup</button>
+ </div>
+
+ <div class="bigpic">
+
+    <p>Airnest it easily with Airnest Setup</p>
+    <img src="https://a0.muscache.com/im/pictures/65214d06-ffb4-4b70-93c0-01d368e76649.jpg?im_w=2560&im_q=highq" alt="bigpicture">
+
+ </div>
+ 
+ <div class="featurestext">
+
+    <div class="featuretext">
+    <h2>One-to-one guidance from a Superhost</h2>
+      <p>We'll match you with a Superhost in your area,</p>
+      <p>who'll guide you from your first question to your</p>
+      <p>first guest – by phone, video call or chat.</p>
+    </div>
+ 
+    <div class="featuretext">
+    <h2>An experienced guest for your first booking</h2>
+      <p>For your first booking, you can choose to welcome<p>
+      <p>an experienced guest who has at least three</p>
+      <p>stays and a good track record on Airnest.</p>
+    </div>
+ 
+    <div class="featuretext">
+        <h2>Specialised support from Airnest</h2>
+      <p>New Hosts get one-tap access to specially trained</p>
+      <p> Community Support agents who can help with </p>
+      <p>everything from account issues to billing support.</p>
+    </div>
+ 
+  </div>
+
+  <div class="aircover">
+    <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727218100752/original/32ac40bb-cf46-4994-9083-f6f0810d401e.png?im_w=240&im_format=avif" height="70px" alt="aircover">
+  </div>
+ 
+  <div class="aircover-content">
+    <h2>However you host, you're protected</h2>
+    <p class="fst">Top-to-bottom protection, included every time you host your home on Airnest.</p>
+    <ul>
+      <li>Up to $3m USD damage protection<i class="fa-solid fa-check"></i></li>
+      <li>Up to $1m USD liability insurance<i class="fa-solid fa-check"></i></li>
+      <li>24-hour safety line<i class="fa-solid fa-check"></i></li>
+    </ul>
+    <button class="aircoverbttn">Learn About Aircover</button>
+    <p class="aircover-disclaimer">Host Damage Protection reimburses for certain guest damages during Airnest stays. It's not insurance and </p>
+    <p class="snd">may apply if guests don't pay. Liability insurance is provided by 3rd parties. <a href="#">Check details and exclusions.</a></p>
+  </div>
+
+  
+
+<div class="faq-container">
+  <div class="faq-section">
+    <div class="faq-header">
+      <h1>Your questions, answered</h1>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-select" onclick="toggleOptions(this)">Top questions</button>
+        <ul class="faq-options">
+          <li>Is my place right for Airbnb?
+            Airbnb guests are interested in all kinds of places – spare rooms, flats, houses, holiday homes, even treehouses.</li>
+          <li>Do I have to host all the time?
+            No – you control your calendar. You can host once a year, a few nights a month or more often.</li>
+          <li>What are Airbnb’s fees?
+            It’s free to create a listing, and Airbnb typically collects a service fee of 3% of the reservation subtotal once you get paid. In many areas, Airbnb automatically collects and pays sales and tourism taxes on your behalf.</li>
+        </ul>
+      </div>
+      <div class="faq-item">
+        <button class="faq-select" onclick="toggleOptions(this)">Hosting basics</button>
+        <ul class="faq-options">
+          <li>How do I get started?
+            You can create a listing in just a few steps, all at your own pace. Start by telling us about your home, take some photos and add details about what makes it unique.</li>
+          <li>How do I get my home ready for guests?
+            Make sure your home is clean, clutter-free, and that everything is working properly. Items like fresh linen and stocked toiletries help create a comfortable and inviting place to stay.</li>
+          <li>How am I protected when I host?
+            AirCover for Hosts provides top-to-bottom protection every time you host your home on Airbnb.</li>
+            <li>Any tips on being a great host?
+                From sharing a list of your favourite local places to responding quickly to guest messages, there are lots of ways to be an excellent host.</li>
+        </ul>
+      </div>
+      <div class="faq-item">
+        <button class="faq-select" onclick="toggleOptions(this)">Policy & regulations</button>
+        <ul class="faq-options">
+          <li>Are there any regulations that apply in my city?
+            Some areas have laws and regulations for hosting your home. It’s important to familiarise yourself with any laws that may apply to your location. Also, depending on where you live, you may need to check with your HOA, read your lease agreement or notify your landlord or neighbours about your plans to host on Airbnb.</li>
+          <li>What if I have other questions?
+            Local hosts are a great source for information and insights. We can connect you with an experienced Airbnb host in your area who may be able to answer additional questions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-footer">
+      <h2>Still have questions?</h2>
+      <p>Get answers from an experienced local host.</p>
+      <button>Ask a host</button>
+    </div>
+  </div>
+</div>
+
+<div class="secondpagefooter">
+    <div class="footer-head">
+    <p>Hosts on the Co‑Host Network typically have high ratings, low cancellation rates and established Airbnb hosting experience. Ratings are based on guest reviews for listings they host or co‑host and</p>
+    <p>may not represent the co‑host’s unique services.</p>
+    <p>Co‑Host Network is powered by Airbnb Global Services Limited, Airbnb Living LLC and Airbnb Plataforma Digital Ltda. Available in select locations only. <a href="#">Learn More.</a></p>
+    </div>
+    <hr>
+      <section class="finalFooter">
+          <div class="finabox">
+              <div class="content">
+                  <h4>Support</h4>
+                  <p>Help Centre</p>
+                  <p>AirCover</p>
+                  <p>Anti-discrimination</p>
+                  <p>Disability support</p>
+                  <p>Cancellation options</p>
+                  <p>Report neighbourhood concern</p>
+              </div>
+              <div class="content">
+                  <h4>Hosting</h4>
+                  <p>Airbnb your home</p>
+                  <p>AirCover for Hosts</p>
+                  <p>Hosting resources</p>
+                  <p>Community forum</p>
+                  <p>Hosting responsibly</p>
+                  <p>Join a free Hosting class</p>
+                  <p>Find a co-host</p>
+              </div>
+              <div class="content">
+                  <h4>Airbnb</h4>
+                  <p>Newsroom</p>
+                  <p>New features</p>
+                  <p>Careers</p>
+                  <p>Investors</p>
+                  <p>Airbnb.org emergency stays</p>
+              </div>
+          </div>
+      </section>     
+      <hr>
+      <footer>
+          <div class="bottomLeft">
+              <p>© 2024 Airbnb, Inc.  • <a href="#">Privacy</a> • <a href="#">Terms</a> • <a href="#">Sitemap</a> • <a href="#">Company details</a></p>
+          </div>
+          <div class="bottomRight">
+              <a href="#"> <i class="fa-solid fa-globe"></i> English (IN)</a>
+              <a href="#">₹ INR</a>
+              <div class="icons">
+                <a href="https://www.facebook.com/AirbnbIndia" target="_blank">
+                <i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a href="https://x.com/i/flow/login?redirect_after_login=%2Fairbnb_in" target="_blank">
+                <i class="fa-brands fa-square-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/airbnb/" target="_blank">
+                <i class="fa-brands fa-square-instagram"></i>
+                </a>
+              </div>
+          </div>
+      </footer>
+  </div>
+
+</body>
+<script src="airnestsecond.js"></script>
+</html>
+
+
