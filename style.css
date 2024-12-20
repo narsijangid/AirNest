@@ -179,6 +179,7 @@ header {
     text-align: center;
     white-space: nowrap;
 }
+
 .category:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
@@ -203,5 +204,3 @@ header {
         height: 20px;
     }
 }
-
-
