@@ -42,27 +42,27 @@ updateCarousel();
 
 
 
-// Ensure the card starts hidden
+// ))))))))))))))))))))
 window.addEventListener('DOMContentLoaded', function() {
   const cardofbnb = document.querySelector('.cardofbnb');
   cardofbnb.classList.add('hidden');
 });
 
-// Scroll event listener
+
 window.addEventListener('scroll', function() {
   const cardofbnb = document.querySelector('.cardofbnb'); 
   const scrollTop = window.scrollY; 
   const scrollBottom = scrollTop + window.innerHeight; 
   const documentHeight = document.documentElement.scrollHeight; 
 
-  // Show card when scrolled past 407px
+ 
   if (scrollTop > 407) {
       cardofbnb.classList.remove('hidden');
   } else {
       cardofbnb.classList.add('hidden');
   }
 
-  // Hide card when close to bottom of the page
+  
   if (scrollBottom > documentHeight - 2200) {
       cardofbnb.classList.add('hidden');
   }
@@ -72,28 +72,28 @@ window.addEventListener('scroll', function() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Get query parameters from the URL
+ 
   const params = new URLSearchParams(window.location.search);
 
-  // Extract data
+ 
   const name = params.get('name');
   const image1 = params.get('image1');
   const image2 = params.get('image2');
 
-  // Update title
+ 
   document.querySelector('h2').textContent = name;
   document.querySelector('#productpageimage #firstimg img').src = image1;
 
-  // Update images
+ 
   const imageGrid = document.querySelector('#productimagegrid');
   imageGrid.children[0].src = image1;
   imageGrid.children[1].src = image2;
-  imageGrid.children[2].src = image1; // Reuse the first image for demonstration
-  imageGrid.children[3].src = image2; // Reuse the second image for demonstration
+  imageGrid.children[2].src = image1; 
+  imageGrid.children[3].src = image2; 
 });
 
 
-// togel menue
+
 function toggleMenu() {
   var menu = document.getElementById('userMenu');
 

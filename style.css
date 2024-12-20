@@ -189,9 +189,7 @@ header {
     flex-direction: column;
     align-items: center;
     width: 100px;
-    /* Adjust the width to fit the category */
     min-width: 100px;
-    /* Ensures each category takes equal space */
     justify-content: center;
 }
 
@@ -208,7 +206,7 @@ header {
     white-space: nowrap;
 }
 
-/* Arrows */
+
 .arrow {
     background-color: transparent;
     border: none;
@@ -363,6 +361,7 @@ form .login-btn:hover {
 .card {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .card img {
@@ -1201,7 +1200,7 @@ border-top-right-radius: 20px;
 
 .column {
     width: 30%;
-    margin: 0 10px; /* Adjust the margin as needed */
+    margin: 0 10px; 
 }
 
 h2 {
@@ -1219,7 +1218,7 @@ li {
 
 a {
     text-decoration: none;
-    color: #000000; /* Adjust the link color */
+    color: #000000; 
 }
 
 
@@ -1236,7 +1235,7 @@ a {
 
 
 .airbnb-card {
-    /* Overall card styling */
+
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
