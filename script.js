@@ -131,7 +131,7 @@ function displayData(data) {
             <i class="heart-icon" data-liked="false" onclick="toggleHeart(this)">&#9825;</i>
             <button class="slider-btn right" onclick="switchImage(this, 'next')">&#10095;</button>
             <button class="slider-btn left" onclick="switchImage(this, 'prev')">&#10094;</button>
-            <img src="${place.image}" alt="${place.name}" data-alt-image="${place.image2}">
+            <img  src="${place.image}" alt="${place.name}" data-alt-image="${place.image2}">
         </div>
         <div>
             <div class="card-header">
@@ -144,8 +144,9 @@ function displayData(data) {
         </div>
         `;
 
-      
-        divCard.addEventListener('click', () => {
+        // Event listener for image click only
+        const image = divCard.querySelector('img');
+        image.addEventListener('click', () => {
             const queryParams = new URLSearchParams({
                 name: place.name,
                 image1: place.image,
@@ -155,6 +156,20 @@ function displayData(data) {
                 price: place.price,
             });
             window.location.href = `productpage.html?${queryParams.toString()}`;
+        });
+
+       
+        const heartIcon = divCard.querySelector('.heart-icon');
+        const sliderButtons = divCard.querySelectorAll('.slider-btn');
+        heartIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); 
+            toggleHeart(heartIcon);
+        });
+        sliderButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.stopPropagation(); 
+               
+            });
         });
 
         heroSection.appendChild(divCard);
@@ -309,3 +324,5 @@ toggleSwitch.addEventListener('click', () => {
 });
 
 // )))))))))))))))))))))
+
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
