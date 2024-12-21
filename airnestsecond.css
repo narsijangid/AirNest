@@ -18,13 +18,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed; 
+  position: fixed;
   top: 0;
-  left: 0; 
-  width: 100%; 
+  left: 0;
+  width: 100%;
   background-color: white;
-  padding: 20px 150px; 
+  padding: 20px 150px;
   z-index: 1000;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.nestheader.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
 }
 
 .nestlogo img {
@@ -44,9 +50,8 @@ body {
 }
 
 .nestheader > button:hover {
-  background-color: #e22c54; 
+  background-color: #e22c54;
 }
-
 
 .container {
   display: flex;
@@ -155,14 +160,21 @@ input[type="range"]{
   border-radius: 10px;
 }
 
+
 .mobile {
   text-align: center;
-  margin: 20px;
+  margin: 50px 75px ;
 }
 
 .mobile h1 {
   margin-bottom: 50px;
   font-size: 50px;
+}
+
+.mobile img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .features {
@@ -187,6 +199,7 @@ input[type="range"]{
   height: 50px;
   margin-bottom: 20px;
   text-align: center;
+  display: inline-block;
 }
 
 .feature p {
@@ -211,8 +224,52 @@ input[type="range"]{
   transition: background-color 0.3s ease;
 }
 
-.cta-button button:hover ,.aircoverbttn:hover {
+.cta-button button:hover {
   background-color: #333;
+}
+
+.bigpic p {
+  font-size: 45px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bigpic > img {
+  height: auto;
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.featurestext {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 45px auto;
+  max-width: 1200px;
+  gap: 65px;
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+
+.featuretext {
+  flex: 1;
+  text-align: center;
+}
+
+.featuretext h2 {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.featuretext p {
+  font-size: 16px;
+  color: gray;
+  margin: 5px 0;
 }
 
 .aircover {
@@ -221,55 +278,50 @@ input[type="range"]{
 }
 
 .aircover-content {
-text-align: center;
-margin-bottom: 20px;
-font-size: 18px;
-line-height: 1.6;
+  text-align: center;
+  margin: 25px 400px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .aircover-content h2 {
-font-size: 50px;
-margin-bottom: 20px;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
-.fst{
-font-size: 22px;
-color: gray;
+.fst {
+  font-size: 22px;
+  color: gray;
 }
 
-.aircover-content ul{
-list-style-type: none;
-padding: 0;
-margin-top: 65px;
-margin-bottom: 65px;
-margin-left: 475px;
-margin-right:475px;
+.aircover-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 65px;
+  margin-bottom: 65px;
 }
 
-.aircover-content ul li{
-font-size: 18px;
-margin: 10px 0;
-display: flex;
-justify-content: space-between; 
-align-items: center;
-padding: 15px 0; 
-border-bottom: 1px solid #ddd;
-border-top: none;
+.aircover-content ul li {
+  font-size: 18px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 15px 0; 
+  border-bottom: 1px solid #ddd;
 }
 
-.aircover-content ul li:last-child{
-border-bottom: none; 
+.aircover-content ul li:last-child {
+  border-bottom: none; 
 }
 
-
-
-.aircover-content i{
-color: rgb(4, 200, 4); 
-font-weight: bold;
-margin-left: auto;
+.aircover-content i {
+  color: rgb(4, 200, 4); 
+  font-weight: bold;
+  margin-left: auto;
 } 
 
-.aircover-disclaimer{
+.aircover-disclaimer {
   font-size: 14px;
   color: gray;
   margin-top: 30px;
@@ -278,13 +330,14 @@ margin-left: auto;
 .snd{
   font-size: 14px;
   color: gray;
+  margin-top: 0;
 }
 
-.snd>a{
+.snd a {
   color: black;
 }
 
-.aircoverbttn{
+.aircoverbttn {
   padding: 15px 80px;
   font-size: 18px;
   font-weight: bold;
@@ -296,43 +349,10 @@ margin-left: auto;
   transition: background-color 0.3s ease;
 }
 
-.bigpic p{
-  font-size: 45px;
-  margin-top: 100px;
-  margin-bottom: 30px;
-  font-weight: bold;
-  text-align: center;
+.aircoverbttn:hover {
+  background-color: #333;
 }
 
-.bigpic>img{
-  height: 30rem;
-  width:80%;
-  margin-left: 150px;
-}
-
-.featurestext {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 45px auto;
-  max-width: 1200px;
-  gap: 65px;
-}
-
-.featuretext>h2{
-  text-align: center;
-  text-align: justify;
-  font-size: 18px;
-  color: black;
-  margin-bottom: 5px;
-}
-
-.featuretext{
-  text-align: center;
-  text-align: justify;
-  font-size: 16px;
-  color: gray;
-}
 
 .faq-container{
   background-color:#F7F7F7 ;
@@ -447,38 +467,38 @@ background-color: #333;
   border-top: 1px solid #e0e0e0;
 }
 
-.footer-head{
-font-size: 14px;
-color: gray;
-padding-top: 5px;
-padding-bottom: 5px;
-padding-left: 100px;
-padding-right: 100px;
+.footer-head {
+  font-size: 14px;
+  color: gray;
+  padding: 0 5%;
+  margin-bottom: 20px;
 }
- 
-.footer-head p{
+
+.footer-head p {
   margin-top: 3px;
 }
-.footer-head>p>a{
-color: black;
+
+.footer-head > p > a {
+  color: black;
 }
 
 .finalFooter {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-left: 100px;
-  padding-right: 100px;
+  gap: 20px;
+  padding: 0 5%;
 }
 
 .finabox {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .content {
-  flex: 1;
+  flex: 1 1 200px;
   margin: 0 10px;
 }
 
@@ -511,13 +531,13 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 10px 100px;
-
+  padding: 10px 5%;
 }
 
 .bottomLeft {
   font-size: 15px;
   color: black;
+  flex: 1;
 }
 
 .bottomLeft a {
@@ -535,9 +555,11 @@ footer {
   align-items: center;
   font-size: 15px;
   font-weight: bold;
+  flex: 1;
+  justify-content: flex-end;
 }
 
-.bottomRight a{
+.bottomRight a {
   text-decoration: none;
   margin-right: 10px;
   color: #333;
@@ -553,4 +575,383 @@ footer {
 
 .icons i:hover {
   color: #000;
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .nestheader {
+      padding: 15px 50px;
+  }
+
+  .nestheader > button {
+      padding: 10px 20px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nestheader {
+      padding: 10px 20px;
+  }
+
+  .nestlogo img {
+      height: 40px;
+  }
+
+  .nestheader > button {
+      font-size: 13px;
+      padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nestheader {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 15px;
+      gap: 10px;
+  }
+
+  .nestlogo img {
+      height: 35px;
+  }
+
+  .nestheader > button {
+      width: 100%;
+      font-size: 14px;
+      text-align: center;
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+      gap: 50px;
+  }
+
+  .content {
+      margin-top: 50px;
+      padding-top: 50px;
+  }
+
+  .map-container {
+      max-width: 500px;
+      height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 30px;
+      gap: 30px;
+  }
+
+  .content h1 {
+      font-size: 35px;
+  }
+
+  .ratep {
+      padding-left: 0;
+      text-align: center;
+  }
+
+  .slider-container {
+      margin: 20px 0;
+  }
+
+  .map-container {
+      max-width: 400px;
+      height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+      max-width: 100%;
+      text-align: center;
+      padding-top: 20px;
+  }
+
+  .content h1 {
+      font-size: 28px;
+      margin: 10px 0;
+  }
+
+  .ratep {
+      font-size: 14px;
+  }
+
+  .slider-container {
+      margin: 10px 0;
+  }
+
+  .search-bar {
+      flex-direction: column;
+      padding: 15px 10px;
+      gap: 5px;
+  }
+
+  .map-container {
+      max-width: 100%;
+      height: 300px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .mobile h1 {
+      font-size: 35px;
+      margin-bottom: 30px;
+  }
+
+  .features {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .feature {
+      max-width: 100%;
+  }
+
+  .feature i {
+      width: 50px;
+      height: 50px;
+      padding: 15px;
+  }
+
+  .feature p {
+      font-size: 14px;
+  }
+
+  .cta-button button {
+      padding: 10px 50px;
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile h1 {
+      font-size: 28px;
+  }
+
+  .features {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .feature i {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+  }
+
+  .feature p {
+      font-size: 12px;
+  }
+
+  .cta-button button {
+      padding: 10px 40px;
+      font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .bigpic p {
+      font-size: 36px;
+      margin-top: 80px;
+      margin-bottom: 20px;
+  }
+
+  .bigpic > img {
+      max-width: 90%;
+  }
+
+  .featurestext {
+      flex-wrap: wrap;
+      gap: 30px;
+  }
+
+  .featuretext {
+      flex: 1 1 calc(50% - 20px); 
+  }
+
+  .featuretext h2 {
+      font-size: 16px;
+  }
+
+  .featuretext p {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bigpic p {
+      font-size: 28px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+  }
+
+  .bigpic > img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .featurestext {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+
+  .featuretext {
+      flex: 1 1 100%;
+  }
+
+  .featuretext h2 {
+      font-size: 14px;
+  }
+
+  .featuretext p {
+      font-size: 12px;
+  }
+}        
+
+
+@media (max-width: 1024px) {
+  .aircover-content {
+      margin: 30px 50px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .aircover-content {
+      margin: 20px; 
+      font-size: 16px;
+  }
+
+  .aircover-content h2 {
+      font-size: 36px;
+  }
+
+  .fst {
+      font-size: 18px;
+  }
+
+  .aircover-content ul li {
+      font-size: 16px;
+  }
+
+  .aircoverbttn {
+      padding: 10px 40px;
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aircover-content {
+      margin: 10px;
+      font-size: 14px;
+  }
+
+  .aircover-content h2 {
+      font-size: 28px;
+  }
+
+  .fst {
+      font-size: 16px;
+  }
+
+  .aircover-content ul li {
+      font-size: 14px;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .aircover-content i {
+      margin-top: 10px;
+  }
+
+  .aircoverbttn {
+      padding: 10px 30px;
+      font-size: 14px;
+  }
+
+  .aircover-disclaimer, .snd {
+      font-size: 12px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .footer-head {
+      padding: 0 10%;
+  }
+
+  .finabox {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .content {
+      flex: 1 1 300px;
+      margin-bottom: 20px;
+  }
+
+  footer {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .bottomRight {
+      justify-content: center;
+      margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-head {
+      padding: 0 20px;
+      font-size: 13px;
+  }
+
+  .content h4 {
+      font-size: 16px;
+  }
+
+  .content p {
+      font-size: 14px;
+  }
+
+  .bottomLeft, .bottomRight {
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-head {
+      font-size: 12px;
+  }
+
+  .content h4 {
+      font-size: 15px;
+  }
+
+  .content p {
+      font-size: 13px;
+  }
+
+  .bottomLeft, .bottomRight {
+      font-size: 12px;
+  }
+
+  .icons i {
+      font-size: 18px;
+  }
 }

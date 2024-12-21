@@ -1,4 +1,16 @@
 
+const header = document.querySelector('.nestheader');
+const setupButton = document.getElementById('setupButton');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+
 function toggleOptions(button) {
   const options = button.nextElementSibling;
   const allOptions = document.querySelectorAll('.faq-options');
