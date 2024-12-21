@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=tune" />
     <script src="https://kit.fontawesome.com/2932bc8540.js" crossorigin="anonymous"></script>
-    <title>Airbnb Clone</title>
+    <link rel="icon" href="/icons/logo.png" type="image/png">
+    <title>AirNest</title>
 </head>
+
 
 <body>
     <header>
         <div class="logo">
-            <a href="#"><img src="/icons/logo.svg" alt="Airbnb Logo"></a>
+            <a href="#"><img src="/icons/logo.png" alt="Airbnb Logo"></a>
         </div>
 
         <div class="search-bar">
@@ -28,16 +28,14 @@
             </div>
         </div>
 
-
         <div class="right-menu">
             <a href="#">Airbnb your home</a>
-            <i class="fa-solid fa-globe"></i>
+            <i class="fa-solid fa-globe" id="languageIcon"></i>
             <div class="user-menu">
                 <a href="javascript:void(0)" class="icon" onclick="toggleMenu()">
                     <i class="fa-solid fa-bars"></i>
                     <i class="fa-solid fa-user-circle"></i>
                 </a>
-
             </div>
         </div>
     </header>
@@ -218,7 +216,33 @@
 
 
 
-    <!-- menue -->
+
+    <div id="hero-section" class="hero-section"></div>
+
+    <div class="hero-footer">
+        <h3>Continue exploring amazing places</h3>
+        <button id="show-more-button">Show More</button>
+    </div>
+
+  
+    <div class="language-popup" id="languagePopup">
+        <div class="popup-header">
+            <span>Select Language</span>
+            <button class="close-btn" id="closePopup">&times;</button>
+        </div>
+        <div class="language-grid">
+            <button>English</button>
+            <button>Spanish</button>
+            <button>French</button>
+            <button>German</button>
+            <button>Chinese</button>
+            <button>Japanese</button>
+            <button>Korean</button>
+            <button>Italian</button>
+        </div>
+    </div>
+   
+
     <div class="menu" id="userMenu">
         <a href="#">Sign up</a>
         <a href="#">Log in</a>
@@ -227,8 +251,33 @@
         <a href="#">Host an experience</a>
         <a href="#">Help Centre</a>
     </div>
+
+    <div class="popup-overlay" id="authPopup">
+        <div class="popup-content">
+            <button class="close-popup-btn" id="closeAuthPopup">&times;</button>
+            <h2>Welcome to AirNest</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    
 </body>
 
-</html>
-
 <script src="script.js"></script>
+</html>
