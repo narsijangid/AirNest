@@ -98,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchData();
 });
 
+let searchproductpart = document.getElementById("searchproductpart");
 const heroSection = document.getElementById('hero-section');
 const showMoreButton = document.getElementById('show-more-button');
 let allData = [];
@@ -110,6 +111,15 @@ async function fetchData() {
     allData = Object.values(data);
     displayData(allData.slice(0, ROW_LIMIT * getCardsPerRow()));
 };
+
+
+
+searchproductpart.addEventListener("input", () => {
+    const searchValue = searchproductpart.value.toLowerCase();
+    const filteredData = allData.filter(place => place.name.toLowerCase().includes(searchValue));
+    displayData(filteredData);
+});
+
 
 function displayData(data) {
     heroSection.innerHTML = "";
@@ -293,3 +303,9 @@ window.onload = checkLoginStatus;
 // (((((((((((((((((((())))))))))))))))))))
 
 
+const toggleSwitch = document.querySelector('.toggle-switch');
+toggleSwitch.addEventListener('click', () => {
+  toggleSwitch.classList.toggle('active');
+});
+
+// )))))))))))))))))))))

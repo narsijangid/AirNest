@@ -16,20 +16,22 @@
         <div class="logo">
             <a href="#"><img src="/icons/logo.png" alt="Airbnb Logo"></a>
         </div>
-
-        <div class="search-bar">
-            <button>Anywhere</button>
+ <!-- <button>Anywhere</button>
             <span>|</span>
             <button>Any week</button>
             <span>|</span>
-            <button>Add guests</button>
-            <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
+            <button>Add guests</button> -->
+   
+    
+            <div class="search-bar">
+                <input type="text" id="searchproductpart" placeholder="Search here...">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
             </div>
-        </div>
+            
+     
 
         <div class="right-menu">
-            <a href="#">Airbnb your home</a>
+            <a id="airbnbyouhomestyle" href="/airnestsidehomepage.html">Airbnb your home</a>
             <i class="fa-solid fa-globe" id="languageIcon"></i>
             <div class="user-menu">
                 <a href="javascript:void(0)" class="icon" onclick="toggleMenu()">
@@ -42,6 +44,10 @@
 
 
     <!-- categore bar -->
+
+
+<div class="navbarsection">
+
 
     <div class="slider-wrapper">
         <button class="arrow left-arrow" >
@@ -197,9 +203,22 @@
         <button class="arrow right-arrow" >
            <img id="rightArrow" src="/icons/next2.svg" alt="">
         </button>
+    
     </div>
 
+    <div class="filterdatafromjson">
+    
+            <img id="filtericonstyle" src="/icons/Filters.svg" alt="">
+            <p id="filterpara">Filters</p>
+    </div>
 
+    
+    <div class="toggle-container">
+        <span class="toggle-label">Display total before taxes</span>
+        <div class="toggle-switch"></div>
+      </div>
+
+</div>
 
 
     <div id="hero-section" class="hero-section"></div>

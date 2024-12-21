@@ -29,7 +29,7 @@ header {
 
 }
 
-.search-bar {
+/* .search-bar {
     display: flex;
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -37,30 +37,30 @@ header {
     padding: 0.5rem 1rem;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     gap: 0.5rem;
-}
+} */
 
-.search-bar button {
+/* .search-bar button {
     background: none;
     border: none;
     font-weight: bold;
     cursor: pointer;
-}
+} */
 
-.search-bar span {
+/* .search-bar span {
     color: rgba(0, 0, 0, 0.3);
-}
+} */
 
-.search-icon {
+/* .search-icon {
     background-color: #ff385c;
     color: white;
     border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
+    width: 33px;
+    height: 33px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
+} */
 
 
 .right-menu {
@@ -166,7 +166,7 @@ header {
 /* Category Slider Styles */
 .slider-wrapper {
     position: relative;
-    width: 63%;
+    width: 58%;
     margin-top: 20px;
     margin-left: 30px;
     overflow: hidden;
@@ -1398,11 +1398,194 @@ a {
     display: none;
 }
 
+#languageIcon{
+    height: 36px;
+    width: 36px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+#languageIcon:hover{
+    height: 36px;
+    width: 36px;
+    background-color: #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+#airbnbyouhomestyle{
+    height: 36px;
+    width: 160px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+#airbnbyouhomestyle:hover{
+    height: 36px;
+    width: 160px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
 
 
 /* (((((((((((((((((((((()))))))))))))))))))))) */
+/* Container styling for the search bar */
+.search-bar {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+   
+}
+
+/* Input field styling */
+#searchproductpart {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+
+#searchproductpart:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 5px #ff385c;
+}
+
+
+.search-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #ff385c;
+    height: 33px;
+    width: 34px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 18px;
+    pointer-events: none;
+    transition: color 0.3s ease;
+    border-radius: 50% !important;
+    
+}
 
 
 
+#searchproductpart:focus + .search-icon {
+    color: #ffffff;
+}
+
+
+#seachproductpart{
+   height: 34px;
+  border: solid 0.1px black;
+   border-radius: 20px;
+}
 /* ((((((((((((((((((((((((())))))))))))))))))))))))) */
+
+.navbarsection{
+    display: flex;
+}
+
+.filterdatafromjson{
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    width: 100px;
+    
+    box-shadow: 0px 0px 2px black;
+    margin: 24px;
+    margin-left: 37px;
+    border-radius: 4px;
+
+}
+
+.filterdatafromjson:hover{
+    display: flex;
+    height: 40px;
+    width: 100px;
+    
+    box-shadow: 0px 0px 4px black;
+    margin: 24px;
+    margin-left: 37px;
+    border-radius: 4px;
+
+}
+
+#filtericonstyle{
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+}
+#filterpara{
+
+    margin-top: 6px;
+}
+/* ))))))))))))))))))))))))))))))) */
+
+.toggle-container {
+cursor: pointer;
+  margin-top: 14px;
+  margin-right: 17px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .toggle-label {
+    font-size: 16px;
+    color: #333;
+  }
+
+  .toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .toggle-switch:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 2.5px;
+    left: 2.5px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .toggle-switch.active {
+    background-color: #ff385c;
+  }
+
+  .toggle-switch.active:before {
+    transform: translateX(25px);
+  }
+
+/* ((((((((((((((((())))))))))))))))) */
