@@ -257,11 +257,9 @@ function openAuthPopup() {
 function closeAuthPopup() {
     document.getElementById('authPopup').style.display = 'none';
 }
-
 function checkLoginStatus() {
     const user = localStorage.getItem('user');
     if (user) {
-     
         const userName = JSON.parse(user).name;
         document.getElementById('signUpBtn').style.display = 'none';
         document.getElementById('logInBtn').style.display = 'none';
@@ -270,51 +268,68 @@ function checkLoginStatus() {
             <a href="#">${userName}</a>
             <a href="javascript:void(0)" id="logoutBtn">Log out</a>
             <hr>
+             <a href="javascript:void(0)" id="wishlistBtn">Wishlist</a> 
             <a href="#">Airbnb your home</a>
             <a href="#">Host an experience</a>
             <a href="#">Help Centre</a>
+           
         `;
         document.getElementById('logoutBtn').addEventListener('click', logout);
+        document.getElementById('wishlistBtn').addEventListener('click', showWishlist); // Wishlist button click handler
+    } else {
+        document.getElementById('wishlistBtn').style.display = 'none'; // Hide Wishlist button when not logged in
     }
 }
 
-
 function logout() {
     localStorage.removeItem('user');
-    location.reload();
+    location.reload(); // Reload the page to update the login status
 }
 
+function showWishlist() {
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    const wishlistPopup = document.getElementById("wishlistPopup");
+    const wishlistItems = document.getElementById("wishlistItems");
 
+    wishlistItems.innerHTML = wishlist
+        .map(
+            (item) => `
+        <div class="wishlist-item">
+            <img src="${item.image}" alt="${item.name}">
+            <p>${item.name}</p>
+        </div>`
+        )
+        .join("");
+
+    wishlistPopup.style.display = "flex"; // Show wishlist popup
+}
+
+// Update the checkLoginStatus to ensure the wishlist button visibility is updated
 document.getElementById('signUpBtn').addEventListener('click', openAuthPopup);
 document.getElementById('logInBtn').addEventListener('click', openAuthPopup);
 document.getElementById('closeAuthPopup').addEventListener('click', closeAuthPopup);
-
-
 document.getElementById('authForm').addEventListener('submit', function (e) {
     e.preventDefault();
-    
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    
+
     if (email && password) {
         const user = {
             name: email.split('@')[0],  
             email,
             password
         };
-        
-     
+
         localStorage.setItem('user', JSON.stringify(user));
-        
- 
+
         closeAuthPopup();
-        checkLoginStatus();
+        checkLoginStatus(); // Recheck the login status
     }
 });
 
+window.onload = checkLoginStatus; // Call checkLoginStatus on page load
 
-window.onload = checkLoginStatus;
 // (((((((((((((((((((())))))))))))))))))))
 
 
@@ -324,5 +339,57 @@ toggleSwitch.addEventListener('click', () => {
 });
 
 // )))))))))))))))))))))
+// Add to Wishlist Functionality
+function toggleHeart(heartIcon) {
+    const isLiked = heartIcon.dataset.liked === "true";
+    heartIcon.dataset.liked = !isLiked;
+
+    const card = heartIcon.closest(".card");
+    card.style.border = isLiked ? "none" : "2px solid red";
+
+    if (!isLiked) {
+        const product = {
+            name: card.querySelector(".name").textContent,
+            image: card.querySelector("img").src,
+        };
+
+        const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        wishlist.push(product);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+        alert("Add Successful");
+    }
+}
+
+// Wishlist Popup Logic
+const wishlistBtn = document.getElementById("wishlistBtn");
+const wishlistPopup = document.getElementById("wishlistPopup");
+const closeWishlist = document.getElementById("closeWishlist");
+const wishlistItems = document.getElementById("wishlistItems");
+
+wishlistBtn.addEventListener("click", () => {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    wishlistItems.innerHTML = wishlist
+        .map(
+            (item) => `
+        <div class="wishlist-item">
+            <img src="${item.image}" alt="${item.name}">
+            <p>${item.name}</p>
+        </div>`
+        )
+        .join("");
+
+    wishlistPopup.style.display = "flex";
+});
+
+closeWishlist.addEventListener("click", () => {
+    wishlistPopup.style.display = "none";
+});
+
+wishlistPopup.addEventListener("click", (event) => {
+    if (event.target === wishlistPopup) {
+        wishlistPopup.style.display = "none";
+    }
+});
 
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
