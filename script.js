@@ -268,7 +268,7 @@ function checkLoginStatus() {
             <a href="#">${userName}</a>
             <a href="javascript:void(0)" id="logoutBtn">Log out</a>
             <hr>
-             <a href="javascript:void(0)" id="wishlistBtn">Wishlist</a>
+             <a href="javascript:void(0)" id="wishlistBtn">Wishlist</a> 
             <a href="#">Airbnb your home</a>
             <a href="#">Host an experience</a>
             <a href="#">Help Centre</a>
